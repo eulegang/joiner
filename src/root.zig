@@ -45,7 +45,7 @@ pub const Context = struct {
     forward: u8,
     backward: u8,
 
-    fn load(ch: u8) ?Context {
+    pub fn load(ch: u8) ?Context {
         for (MAPPING) |map| {
             if (ch == map.forward or ch == map.backward) {
                 return map;
