@@ -78,7 +78,7 @@ pub fn main() !void {
         if (out_file) |f|
         try std.fs.cwd().openFile(f, .{ .mode = .write_only })
     else
-        std.io.getStdIn();
+        std.io.getStdOut();
 
     const proc = joiner.Proc.init(ctx, del);
 
